@@ -7,31 +7,172 @@
     <script src="theme-toggle.js"></script>
     <title>Francesco's portfolio website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/Schermata_2022-08-21_alle_18.14.02-removebg-preview.png" class="logo">
-                <ul>
-                    <li> <a id="p" href="#"> Home </a></li>
-                    <li> <a id="p" href="#"> About </a></li>
-                    <li> <a id="p" href="#"> Portfolio </a></li>
-                    <li> <a id="p" href="#"> Contact </a></li>
+                <a href="#header"><img src="images/Schermata_2022-08-21_alle_18.14.02-removebg-preview.png" class="logo"></a>
+                <ul id="sidemenu">
+                    <li> <a id="p" href="#header"> Home </a></li>
+                    <li> <a id="p" href="#about"> About </a></li>
+                    <li> <a id="p" href="#portfolio"> Portfolio </a></li>
+                    <li> <a id="p" href="#contact"> Contact </a></li>
                     <li> <input type="checkbox" class="cb" id="cb"> 
                         <label for="cb" class="label">
-                            <i class="fa-moon"></i>
-                            <i class="fa-sun"></i>
+                            <i class="fas fa-moon"></i>
+                            <i class="fas fa-sun"></i>
                             <div class="ball"></div>
                         </label></li>
+                        <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
-                <p></p>
+                <p class="subt">Junior Software Engineer</p>
                 <h1>Hi, I'm <span>Francesco</span></h1>
             </div>
             <script src="index.js"></script>
         </div>
     </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/undraw_code_review_re_woeb.svg" alt="Coding illustration" class="lg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p id="descrizione">Junior, forward-looking <span id="imp">Software Engineer </span>, seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.
+                        Ability and willingness to innovate and learn new technologies, quick learner passionate about development.
+                    </p>
+                    <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                <!-- <p class="tab-links" onclick="opentab('experience')">Experience</p> -->
+                <p class="tab-links" onclick="opentab('certifications')">Certifications</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Languages</span><br> Proficiency in programming languages like Java, C, Scheme and R</li>
+                        <li><span>Tools</span><br> Practical knowledge of Git version control system, basic of Arduino and Wireshark</li>
+                        <li><span>Hard Skills</span><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit architecto voluptate dignissimos veniam qui reprehenderit accusantium ab, quibusdam iusto quidem, sint maxime? Dolores quis fugit porro libero ullam odit alias! </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><i class="fa-regular fa-calendar"></i> <span> 2021-2024<br> Bachelor in Internet Of Things, Machine Learning and big data</span>
+                        <br><br>
+                        Relevant Courses: Software Engineering, Data Structures and Algorithms, Object-Oriented Programming, Operating Systems, Machine Learning for Big Data,
+                        Web Technologies for the Cloud, Internet Of Things, Databases.
+                        
+                        </li>
+                        <li><i class="fa-regular fa-calendar"></i> <span> 2016-2021<br> Diploma in Computer Science and Telecommunications</span>
+                        <br><br>
+                        Relevant Experience: 2 weeks Study trip in Bath,UK where i attended a English language tuition course and a full programme of cultural activities and excursions.
+                        </li> 
+                </li>
+                    </ul>
+                </div>
+                <!-- <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>Languages</span><br> Proficiency in programming languages like Java, C, Scheme and R</li>
+                        <li><span>Tools</span><br> Practical knowledge of Git version control system, basic of Arduino and Wireshark</li>
+                        <li><span>Hard Skills</span><br> </li>
+                    </ul>
+                </div> -->
+                <div class="tab-contents" id="certifications">
+                    <ul>
+                        <li><i class="fa-regular fa-calendar"></i> <span> May 2021<br> Trinity College London B2 Certification </span>
+                            <br><br> Certification id: 1-2187990379:1-2188004585
+                    </ul>
+                </div> 
+            </div>
+        </div>
+        <!--Portfolio section-->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Projects</h1>
+                <div class="work-list">
+                     <div class="work">
+                         <img class="prima" id="prima" src="images/preview.png">
+                         <div class="layer">
+                            <h3>NFT Copy Trading Dapp</h3>
+                            <p>Aphelios is a digital assets investment Dapp, you can copy biggest collectors trading strategies and invest seamlessly in Non-Fungible tokens (NFTs),
+                                furthermore you can Mint and Collect NFTs on top of Tezos blockchain.
+                            </p>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+                         </div>
+                    </div>
+                    <div class="work">
+                        <img class="prima" id="prima"src="images/pr1.png">
+                        <div class="layer">
+                            <h3>Portfolio website</h3>
+                            <p> My personal portfolio website where you can see my background,skills and contact me.
+                            </p>
+                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+
+                         </div>
+                   </div>
+                 </div> 
+                  <a href="#" class="btn">See more</a>
+            </div>  
+        </div>
+        <!--Contact me section-->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fas fa-paper-plane"></i>silver2002.fm@gmail.com</p>
+                         <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/francesco-marchetto/"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="https://github.com/MarchettoFrancesco"><i class="fa-brands fa-github"></i></a>
+                            <a href="https://twitter.com/IsItFrancesco"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/francescomarchetto_"><i class="fa-brands fa-instagram"></i></a>
+                         </div>
+                         <a href="" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                             <input type="text"name="Name"placeholder="Your Name"required>
+                             <input type="email"name="email"placeholder="Your Email"required>
+                             <textarea name="Message"rows="6"placeholder="Your Message"></textarea>
+                             <button Itype="submit" class="btn btn2">Submit</button>
+                        </form>
+                   </div>
+                    <div class="contact-right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright ©Francesco Made with <i class="fas fa-heart"></i> by Me</p>
+        </div>
+    </div>
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");I
+
+        }
+        var sidemenu = document.getElementById('sidemenu');
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right ="-200px";
+        }
+
+    </script>
 </body>
 </html>
