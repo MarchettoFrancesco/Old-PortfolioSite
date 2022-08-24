@@ -8,12 +8,16 @@
     <title>Francesco's portfolio website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="icon" href="images/rlogo.png" />
+   
 </head>
 <body>
     <div id="header">
         <div class="container">
             <nav>
-                <a href="#header"><img src="images/Schermata_2022-08-21_alle_18.14.02-removebg-preview.png" class="logo"></a>
+                <a href="#header"><img src="images/Schermata_2022-08-24_alle_17.21.46-removebg-preview.png" class="logo"></a>
                 <ul id="sidemenu">
                     <li> <a id="p" href="#header"> Home </a></li>
                     <li> <a id="p" href="#about"> About </a></li>
@@ -46,6 +50,8 @@
                     <h1 class="sub-title">About Me</h1>
                     <p id="descrizione">Junior, forward-looking <span id="imp">Software Engineer </span>, seeking to apply and expand my knowledge and skills towards working in a collaborative environment to develop quality software solutions that address and solve business problems.
                         Ability and willingness to innovate and learn new technologies, quick learner passionate about development.
+                        <br>
+                        In my free time i like to workout, read and build Blockchain related projects. 
                     </p>
                     <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
@@ -55,9 +61,19 @@
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
-                        <li><span>Languages</span><br> Proficiency in programming languages like Java, C, Scheme and R</li>
+                        <li><span>Languages</span><br> Proficiency in programming languages like Java, C, Scheme and R </li>
                         <li><span>Tools</span><br> Practical knowledge of Git version control system, basic of Arduino and Wireshark</li>
-                        <li><span>Hard Skills</span><br> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit architecto voluptate dignissimos veniam qui reprehenderit accusantium ab, quibusdam iusto quidem, sint maxime? Dolores quis fugit porro libero ullam odit alias! </li>
+                        <li><span>Hard Skills</span>
+                            <ul>
+                                <li class="bullet">Smart Contracts development with Smart Py and Solidity</li>
+                                <li class="bullet">Building web3 decentralized applications (Tezos Blockchain)</li>
+                                <li class="bullet">Knowledge of Data Structures and Algorithms</li>
+                                <li class="bullet">Experience in Object-Oriented Programming</li>
+                                <li class="bullet">Networking Basics</li>
+                                <li class="bullet">Encryption and Cryptography</li>
+                                
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="education">
@@ -90,6 +106,8 @@
                 </div> 
             </div>
         </div>
+        </div> 
+    </div>
         <!--Portfolio section-->
         <div id="portfolio">
             <div class="container">
@@ -100,9 +118,10 @@
                          <div class="layer">
                             <h3>NFT Copy Trading Dapp</h3>
                             <p>Aphelios is a digital assets investment Dapp, you can copy biggest collectors trading strategies and invest seamlessly in Non-Fungible tokens (NFTs),
-                                furthermore you can Mint and Collect NFTs on top of Tezos blockchain.
+                                furthermore you can Mint and Collect NFTs on top of Tezos blockchain. <br>
+                                
                             </p>
-                            <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="Projects.html"><i class="fas fa-external-link-alt"></i></a>
 
                          </div>
                     </div>
@@ -117,7 +136,7 @@
                          </div>
                    </div>
                  </div> 
-                  <a href="#" class="btn">See more</a>
+                  <a href="https://github.com/MarchettoFrancesco" class="btn sm">See more on <i class="fa-brands fa-github"></i> </a>
             </div>  
         </div>
         <!--Contact me section-->
@@ -136,12 +155,13 @@
                          <a href="" download class="btn btn2">Download CV</a>
                     </div>
                     <div class="contact-right">
-                        <form>
-                             <input type="text"name="Name"placeholder="Your Name"required>
-                             <input type="email"name="email"placeholder="Your Email"required>
-                             <textarea name="Message"rows="6"placeholder="Your Message"></textarea>
-                             <button Itype="submit" class="btn btn2">Submit</button>
+                        <form name="submit-to-google-sheet">
+                             <input type="text" name="Name" placeholder="Your Name" required>
+                             <input type="email" name="Email" placeholder="Your Email" required>
+                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
+                        <span id="msg"></span>
                    </div>
                     <div class="contact-right"></div>
                 </div>
@@ -150,29 +170,32 @@
         <div class="copyright">
             <p>Copyright ©Francesco Made with <i class="fas fa-heart"></i> by Me</p>
         </div>
-    </div>
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");I
-
-        }
-        var sidemenu = document.getElementById('sidemenu');
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right ="-200px";
-        }
-
-    </script>
+       
+        <script>
+            ScrollReveal({
+            reset:true,
+            distance:'60px',
+            duration:1500,
+            delay:100
+        });
+        ScrollReveal().reveal('.header-text, .sub-title',{delay:0,origin:'top'});
+        ScrollReveal().reveal('.about-col-2, .work-list',{delay:200,origin:'bottom'});                                                              
+        ScrollReveal().reveal('.about-col-1',{delay:100,origin:'left'});
+        
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbxHwFCCg9y1Qv1nh7j4kvtVsOgtYlkKLe9pBnRPXJlC-OOJ_UMGTWOhBLJSuwNPWDoY/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg");
+            form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent succesfully"
+                    setTimeout(function(){
+                            msg.innerHTML= "" 
+                        },5000)
+                        form.reset() })
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
 </body>
 </html>
