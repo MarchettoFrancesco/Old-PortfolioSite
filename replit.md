@@ -81,10 +81,12 @@ Preferred communication style: Simple, everyday language.
 - **Frontend**: Vite builds the React application to `dist/public`
 - **Backend**: ESBuild bundles the Express server to `dist/index.js`
 - **Assets**: Static assets are served from the built frontend
+- **GitHub Pages**: Static frontend-only deployment with SPA routing support
 
 ### Environment Configuration
 - **Development**: Uses `tsx` for hot reloading TypeScript server
 - **Production**: Compiled JavaScript with Node.js runtime
+- **GitHub Pages**: Static client-side only deployment
 - **Database**: Environment variable-based configuration for database URL
 
 ### Scripts
@@ -92,6 +94,13 @@ Preferred communication style: Simple, everyday language.
 - `build`: Production build for both frontend and backend
 - `start`: Production server startup
 - `db:push`: Database schema synchronization
+
+### GitHub Pages Deployment
+- **Workflow**: `.github/workflows/deploy.yml` handles automatic deployment
+- **Build Script**: `build-github-pages.sh` for manual local builds
+- **SPA Support**: 404.html fallback for client-side routing
+- **Jekyll Bypass**: .nojekyll file prevents GitHub Pages Jekyll processing
+- **Documentation**: Complete deployment guide in `DEPLOYMENT.md`
 
 ## Current Implementation Status
 
