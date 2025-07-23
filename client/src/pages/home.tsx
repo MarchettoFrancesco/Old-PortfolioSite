@@ -10,6 +10,7 @@ import {
 import { AnimatedBackground } from "@/components/animated-background";
 import SplashCursor from "@/components/SplashCursor";
 import { ThemeToggle } from "@/components/theme-toggle";
+import seedImage from "./IMG-20230824-WA0016.jpg";
 
 export default function Home() {
   return (
@@ -37,8 +38,8 @@ export default function Home() {
                   {/* Professional profile picture */}
                   <div className="w-64 h-64 mx-auto lg:mx-0 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-500/20 animate-float">
                     <img
-                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&h=600"
-                      alt="Francesco Marchetto - AI Engineer & Researcher"
+                      src={seedImage}
+                      alt="Seed"
                       className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -55,9 +56,7 @@ export default function Home() {
                     <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium">
                       AI Engineer
                     </span>
-                    <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium">
-                      Researcher
-                    </span>
+
                     <span className="glass-effect px-4 py-2 rounded-full text-sm font-medium">
                       Innovator
                     </span>
@@ -214,13 +213,11 @@ export default function Home() {
                 >
                   <Github className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-gray-600 dark:group-hover:text-gray-200" />
                 </a>
-
-
               </div>
 
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  📍 Villorba, TV, Italy • 🎓 AI & Cybersecurity Researcher • 🏆
+                  📍 Villorba, TV, Italy • 🎓 AI & Cybersecurity Student • 🏆
                   Enactus National Champion 2025
                 </p>
               </div>
