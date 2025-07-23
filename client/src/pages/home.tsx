@@ -1,6 +1,6 @@
 import { Mail, Linkedin, Github, Twitter, Phone, GraduationCap, Trophy, Microscope, BrainCircuit } from "lucide-react";
 import { AnimatedBackground } from "@/components/animated-background";
-import { SplashCursor } from "@/components/splash-cursor";
+import SplashCursor from "@/components/SplashCursor";
 import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function Home() {
